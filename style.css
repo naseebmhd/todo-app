@@ -61,9 +61,17 @@ li {
 
 li:hover {
   transform: scale(1.03);
+   box-shadow: 0 0 10px #00adb5;
 }
 
 .completed {
   text-decoration: line-through;
   color: gray;
+}
+#taskList p {
+  color: gray;
+  margin-top: 20px;
+}
+button:active {
+  transform: scale(0.95);
 }

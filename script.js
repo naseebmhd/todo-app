@@ -21,8 +21,19 @@ if (input.value.length < 3) {
 
 
 function displayTasks(filter = "all") {
+  let total = tasks.length;
+let completed = tasks.filter(t => t.completed).length;
+
+document.getElementById("taskCounter").innerText =
+  `Total: ${total} | Completed: ${completed}`;
   let list = document.getElementById("taskList");
+  
   list.innerHTML = "";
+
+if (tasks.length === 0) {
+  list.innerHTML = "<p>No tasks yet 🚀</p>";
+  return;
+}
 
   tasks.forEach((task, index) => {
     if (
